@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AGNES Advanced Course</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/theme.css"/>
+<link href="assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css" rel="stylesheet"/>
+
+
+  <style>
+    body {
+      margin: 0;
+      padding-top: 100px; /* Adjusted to header height */
+      font-size: 16.5px;
+      line-height: 1.6;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    header.header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+      height: 100px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .header img {
+      max-height: 45px;
+    }
+
+    main#content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .wiki-sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 240px;
+      height: calc(100vh - 100px);
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .wiki-sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .wiki-sidebar li {
+      margin-bottom: 12px;
+    }
+	iframe {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+    .wiki-sidebar a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      display: block;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+
+    .wiki-sidebar a:hover,
+    .wiki-sidebar a.active-toc {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .content-container {
+      margin-left: 260px;
+      padding: 20px;
+      width: calc(100% - 260px);
+    }
+
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .partner-logos img {
+      max-width: 150px;
+      height: auto;
+    }
+
+	.enhanced-go-to {
+	  background-color: #007bff;
+	  color: white !important;
+	  padding: 10px 12px;
+	  border-radius: 50%;
+	  font-size: 18px;
+	  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	  transition: background-color 0.3s ease;
+	}
+	.enhanced-go-to:hover {
+	  background-color: #0056b3;
+	}
+
+    @media (max-width: 768px) {
+      .wiki-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        border-bottom: 1px solid #ddd;
+        border-right: none;
+      }
+
+      .wiki-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .wiki-sidebar li {
+        margin: 5px 10px;
+      }
+
+      .content-container {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Fixed Header -->
+<header class="header bg-light fixed-top" style="border-bottom: 1px solid #ddd;">
+  <div class="container d-flex align-items-center justify-content-between py-2" style="gap: 20px;">
+    
+    <!-- Entire logo group is clickable -->
+    <a href="#" style="text-decoration: none;">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <img src="assets/img/logos/agnes.png" alt="AGNES" style="max-height: 45px;">
+        <img src="assets/img/logos/aiccra.png" alt="AICCRA" style="max-height: 45px;">
+        <img src="assets/img/logos/ciat.png" alt="CIAT" style="max-height: 45px;">
+      </div>
+    </a>
+
+    <!-- Text remains static and unlinked -->
+    <div class="text-end d-none d-md-block">
+      <h6 class="mb-0 fw-semibold text-muted" style="font-size: 16px;">
+        AGNES Advanced Course<br>
+        Climate Information Services
+      </h6>
+    </div>
+    
+  </div>
+</header>
+
+
+<!-- Sidebar TOC -->
+<div class="wiki-sidebar">
+  <ul>
+    <li><a href="#course_description">Course Description</a></li>
+    <li><a href="#learn">What Participants Will Learn</a></li>
+	<li><a href="#why">Why Take the Course</a></li
+    <li><a href="#agenda">Agenda</a></li>
+  </ul>
+</div>
+
+<!-- Main Content -->
+<main id="content">
+  <div class="content-container">
+    <input type="text" id="searchInput" placeholder="Search this page..." style="width:100%; padding:10px; margin-bottom:20px;">
+    <div class="content-inner">
+      <div class="card border p-4 p-md-7" style="background-color: #f9f9f9;">
+        <h2 align="center"><u>AGNES Advanced Course</u></h2>
+        <h4 align="center">Climate Information Services</h4>
+        <h4 align="center">July 21-August 22, 2025 (15:00-17:00 EAT)</h4>
+
+        <section class="partner-logos">
+          <div><img src="assets/img/logos/agnes.png" alt="AGNES"></div>
+          <div><img src="assets/img/logos/aiccra.png" alt="AICCRA"></div>
+          <div><img src="assets/img/logos/ciat.png" alt="CIAT"></div>
+        </section>
+
+        <br/>
+
+        <section id="course_description" style="padding-top: 100px; margin-top: -100px;">
+          <h2 class="h3">Course Description</h2>
+          <p>As climate variability and extreme weather events intensify across Africa, access to timely, actionable climate information has never been more critical. Yet, the use of Climate Information Services (CIS) remains constrained by barriers like technical complexity, limited accessibility, and weak linkages to sectoral decision-making.</p>
+		
+		  <p>The <b>Advanced Course on Climate Information Services</b>, designed by the African Group of Negotiators Expert Support (AGNES) in partnership with AICCRA and the Alliance of Bioversity International & CIAT, responds directly to this challenge. This 5-week intensive online training empowers professionals across government, NGOs, civil society, and research institutions with practical, policy-relevant skills to design, deliver, and apply CIS in real-world contexts.</p>
+		  
+		  <p>Drawing on the latest science and innovations, and taught by leading regional and global experts, the course combines technical depth, applied examples, and participatory learning. Sessions explore the full ecosystem of CIS—from risk framing, forecasting, and delivery systems, to governance, finance, and co-production—anchored in African realities.</p>
+        </section>
+		
+		<section id="learn" style="padding-top: 100px; margin-top: -100px;">
+          <h2 class="h3">What Participants Will Learn</h2>
+         <ul>
+                <li><b>Core CIS Competencies:</b> Understand the pillars of CIS, forecasting types, and best practices around communication of uncertainty.</li>
+                <li><b>User-Centered Design:</b> Learn how to tailor CIS for diverse users—farmers, health workers, water managers, and more.</li>
+				<li><b>From Data to Action:</b> Build confidence in interpreting forecasts, translating data into decisions, and evaluating impact.</li>
+				<li><b>Sectoral Applications:</b> Deep dives into how CIS is used to inform agriculture, water, health, energy, infrastructure, and social protection.</li>
+				<li><b>Policy and Institutional Integration:</b> Explore how CIS links to National Adaptation Plans (NAPs), Nationally Determined Contributions (NDCs), Early Warning Systems, and national development plans.</li>
+				<li><b>Ethics & Innovation:</b> Address challenges in equity, digital access, and responsible use of emerging technologies like Artificial Intelligence (AI).</li>
+             </ul>
+        </section>
+		
+		<section id="why" style="padding-top: 100px; margin-top: -100px;">
+          <h2 class="h3">Why Take the Course</h2>
+         <ul>
+                <li><b>Respond to real demand:</b> The course was designed based on a needs assessment of 280+ African professionals and practitioners from across sectors working on climate-related issues.</li>
+                <li><b>Bridge the gap:</b> Move from awareness to confident, actionable use of climate data in programs and policy.</li>
+				<li><b>Access world-class instructors and speakers:</b> Participants will learn from a diverse range of instructors and guest speaker representing regional climate authorities, national meteorological and research institutions, international scientific organizations, universities and think tanks, development and civil society partners, private sector innovators, and local practitioners, ensuring a rich, multi-scale perspective on Climate Information Services.</li>
+				<li><b>Join a vibrant community:</b> Connect with a pan-African network of experts through reflection sessions and peer exchange.</li>
+				<li><b>Advance your mission:</b> Whether you're driving early warning systems, planning climate-smart agriculture, or crafting adaptation policies, this course will elevate your impact.</li>
+				
+             </ul>
+        </section>
+
+					   <section id="agenda" style="padding-top: 100px; margin-top: -100px;">
+				  <h2 class="h3">Agenda</h2>
+				  <iframe 
+					src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTpyfoS1qu7P1a9uNB0GMGi6KD_a728qMNIaIQ3iR_uyfIcKrVmVd_qrie4RPRgH1HRScc2wnHXa1NC/pubhtml?gid=0&single=true&widget=true&headers=false" 
+					width="100%" 
+				   height="1600" 
+				  frameborder="0" 
+				  style="border:0;">
+				  </iframe>
+				</section>
+        
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ========== END MAIN ========== -->
+<!-- ========== FOOTER ========== -->
+<footer class="bg-navy">
+<div class="container">
+<hr class="opacity-xs my-0"/>
+<div class="space-1">
+<!-- Copyright -->
+<div class="w-md-75 text-lg-center mx-lg-auto">
+<h5 class="text-white">© AGNES Advanced Course Climate Information Services. 2025.</h5>
+</div>
+<!-- End Copyright -->
+</div>
+</div>
+</footer>
+<!-- ========== END FOOTER ========== -->
+<!-- Go to Top -->
+<a class="js-go-to go-to position-fixed enhanced-go-to" data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": 15
+         },
+         "show": {
+           "bottom": 15
+         },
+         "hide": {
+           "bottom": -15
+         }
+       }
+     }' href="javascript:;" style="visibility: hidden;">
+<i class="fas fa-angle-up"></i>
+</a>
+
+<!-- End Go to Top -->
+<!-- JS Global Compulsory -->
+<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script src="assets/vendor/hs-header/dist/hs-header.min.js"></script>
+<script src="assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+<script src="assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+<script src="assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+<script src="assets/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
+<script src="assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="assets/js/hs.core.js"></script>
+<!-- JS Plugins Init. -->
+<script>
+    $(document).on('ready', function () {
+      // initialization of header
+      var header = new HSHeader($('#header')).init();
+
+      // initialization of mega menu
+      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
+
+      // initialization of unfold
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+
+      // initialization of show animations
+      $('.js-animation-link').each(function () {
+        var showAnimation = new HSShowAnimation($(this)).init();
+      });
+
+      
+
+      // initialization of go to
+      $('.js-go-to').each(function () {
+        var goTo = new HSGoTo($(this)).init();
+      });
+    });
+	
+	
+  </script>
+
+<script>
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const search = this.value.toLowerCase();
+    const sections = document.querySelectorAll("main section, main p, main li");
+    sections.forEach(s => {
+      s.style.display = s.textContent.toLowerCase().includes(search) ? "" : "none";
+    });
+  });
+
+  // Highlight active TOC link
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".wiki-sidebar a");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute("id");
+        const link = document.querySelector('.wiki-sidebar a[href="#' + id + '"]');
+        if (entry.isIntersecting) {
+          navLinks.forEach(el => el.classList.remove("active-toc"));
+          if (link) link.classList.add("active-toc");
+        }
+      });
+    }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 });
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+</body>
+</html>
